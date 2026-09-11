@@ -1,0 +1,250 @@
+:root {
+    --primary-color: #0f9d58;
+    --secondary-color: #2563eb;
+
+    --background-color: #f5f7fa;
+    --card-color: #ffffff;
+
+    --text-color: #1f2937;
+    --muted-color: #6b7280;
+
+    --border-color: #e5e7eb;
+
+    --sidebar-width: 240px;
+
+    --border-radius: 10px;
+
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+
+    background: #111827;
+
+    color: #f8fafc;
+
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+body.dark-mode .sidebar {
+
+    background: #1e293b;
+
+    border-color: #334155;
+
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+body.dark-mode .main-content {
+
+    background: #111827;
+
+}
+
+
+/* =========================
+   HEADINGS & TEXT
+========================= */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode strong {
+
+    color: #f8fafc;
+
+}
+
+
+body.dark-mode p,
+body.dark-mode label {
+
+    color: #cbd5e1;
+
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+body.dark-mode .dashboard-card,
+body.dark-mode .summary-card {
+
+    background: #1e293b;
+
+    border-color: #334155;
+
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+
+    background: #0f172a;
+
+    color: #f8fafc;
+
+    border-color: #475569;
+
+}
+
+
+body.dark-mode input::placeholder {
+
+    color: #94a3b8;
+
+}
+
+
+/* =========================
+   TABLES
+========================= */
+
+body.dark-mode table {
+
+    color: #f8fafc;
+
+}
+
+
+body.dark-mode th {
+
+    background: #334155;
+
+    color: #f8fafc;
+
+}
+
+
+body.dark-mode td {
+
+    border-color: #334155;
+
+}
+
+
+body.dark-mode tr {
+
+    border-color: #334155;
+
+}
+
+
+/* =========================
+   SIDEBAR LINKS
+========================= */
+
+body.dark-mode .sidebar-nav a {
+
+    color: #cbd5e1;
+
+}
+
+
+body.dark-mode .sidebar-nav a:hover {
+
+    background: #334155;
+
+    color: #ffffff;
+
+}
+
+
+body.dark-mode .sidebar-nav a.active {
+
+    background: #16a34a;
+
+    color: #ffffff;
+
+}
+
+
+/* =========================
+   SETTINGS PAGE
+========================= */
+
+body.dark-mode .appearance-setting {
+
+    background: #0f172a;
+
+}
+
+
+body.dark-mode .data-action-item {
+
+    border-color: #334155;
+
+}
+/* =========================
+   DARK MODE - RECURRING PAGE
+========================= */
+
+body.dark-mode .recurring-card,
+body.dark-mode .stat-card,
+body.dark-mode .summary-card {
+    background: #1f2937;
+    color: #f8fafc;
+    border-color: #374151;
+}
+
+
+body.dark-mode .recurring-card h3,
+body.dark-mode .recurring-card p,
+body.dark-mode .recurring-card strong,
+body.dark-mode .stat-card small,
+body.dark-mode .stat-card strong,
+body.dark-mode .summary-card p,
+body.dark-mode .summary-card h3 {
+    color: #f8fafc;
+}
+
+
+body.dark-mode .recurring-card-body p {
+    color: #cbd5e1;
+}
+
+
+body.dark-mode .recurring-card {
+    border: 1px solid #374151;
+}
+
+
+body.dark-mode .recurring-card-header,
+body.dark-mode .recurring-card-body,
+body.dark-mode .recurring-card-actions {
+    border-color: #374151;
+}
+
+
+body.dark-mode .goal-progress,
+body.dark-mode .progress-bar,
+body.dark-mode .comparison-bar,
+body.dark-mode .category-progress {
+    background: #475569;
+}
+
+
+body.dark-mode .empty-state {
+    background: #1f2937;
+    color: #f8fafc;
+}

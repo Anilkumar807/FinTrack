@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FinTrack - Dashboard</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+</head>
+
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+    <!-- Logo -->
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            📊
+        </div>
+
+        <h2>FinTrack</h2>
+
+    </div>
+
+
+    <!-- Navigation -->
+
+    <nav class="sidebar-nav">
+
+        <a
+            href="./dashboard.html"
+            class="nav-link "
+        >
+            <span class="nav-icon">⌂</span>
+            <span>Dashboard</span>
+        </a>
+
+
+        <a
+            href="./transactions.html"
+            class="nav-link "
+        >
+            <span class="nav-icon">↔</span>
+            <span>Transactions</span>
+        </a>
+
+
+        <a href="#" class="nav-link">
+            <span class="nav-icon">↑</span>
+            <span>Income</span>
+        </a>
+
+
+        <a href="#" class="nav-link">
+            <span class="nav-icon">↓</span>
+            <span>Expenses</span>
+        </a>
+
+
+        <a
+            href="./budgets.html"
+            class="nav-link"
+        >
+            <span class="nav-icon">▣</span>
+            <span>Budgets</span>
+        </a>
+
+
+        <a
+            href="./goals.html"
+            class="nav-link"
+        >
+            <span class="nav-icon">◎</span>
+            <span>Goals</span>
+        </a>
+
+
+        <a href="#" class="nav-link">
+            <span class="nav-icon">↻</span>
+            <span>Recurring</span>
+        </a>
+
+
+        <a href="#" class="nav-link">
+            <span class="nav-icon">▥</span>
+            <span>Reports</span>
+        </a>
+
+
+        <a href="#" class="nav-link">
+            <span class="nav-icon">▦</span>
+            <span>Categories</span>
+        </a>
+
+
+        <a href="#" class="nav-link">
+            <span class="nav-icon">⇅</span>
+            <span>Import / Export</span>
+        </a>
+
+
+        <a href="#" class="nav-link">
+            <span class="nav-icon">⚙</span>
+            <span>Settings</span>
+        </a>
+
+    </nav>
+
+</aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+
+        <!-- Header -->
+        <header class="header">
+
+    <!-- Left Side -->
+
+    <div class="header-left">
+
+        <button
+            class="menu-icon"
+            id="menu-toggle"
+            type="button"
+            aria-label="Toggle menu">
+
+            ☰
+
+        </button>
+
+
+        <div class="welcome-section">
+
+            <h1>
+                Welcome back,  <span id="welcome-user-name">User</span>! 👋
+            </h1>
+
+            <p>
+                Here's your financial overview for today.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Right Side -->
+
+    <div class="header-right">
+
+
+        <!-- Dark Mode -->
+
+        <button
+            class="header-icon-btn"
+            id="theme-toggle"
+            type="button"
+            title="Toggle Dark Mode">
+
+            🌙
+
+        </button>
+
+
+        <!-- Notification -->
+
+        <button
+            class="header-icon-btn notification-btn"
+            type="button"
+            title="Notifications">
+
+            🔔
+
+            <span class="notification-dot"></span>
+
+        </button>
+
+
+        <!-- User Profile -->
+
+        <div
+            class="user-profile-wrapper"
+            id="profile-wrapper">
+
+
+            <button
+                class="user-profile"
+                id="user-profile-btn"
+                type="button">
+
+
+                <div class="user-avatar">
+                    👨🏻
+                </div>
+
+
+                <div class="user-info">
+
+                    <strong id="profile-user-name">
+                         <span id="profile-user-name">User</span>
+                    </strong>
+
+                    <small>
+                        Premium User
+                    </small>
+
+                </div>
+
+
+                <span
+                    class="dropdown-arrow"
+                    id="dropdown-arrow">
+
+                    ⌄
+
+                </span>
+
+
+            </button>
+
+
+            <!-- Profile Dropdown -->
+
+            <div
+                class="profile-dropdown"
+                id="profile-dropdown">
+
+
+                <div class="dropdown-profile-header">
+
+                    <div class="dropdown-avatar">
+                        👨🏻
+                    </div>
+
+                    <div>
+
+                        <strong id="dropdown-user-name">
+                             <span id="profile-user-name">User</span>
+                        </strong>
+
+                        <small id="dropdown-user-email">
+                            user@example.com
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dropdown-divider"></div>
+
+
+                <a
+                    href="settings.html"
+                    class="dropdown-item">
+
+                    ⚙️
+                    <span>Settings</span>
+
+                </a>
+
+
+                <button
+                    class="dropdown-item logout-item"
+                    id="logout-btn"
+                    type="button">
+
+                    🚪
+                    <span>Logout</span>
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- Dashboard Top Actions -->
+
+<div class="dashboard-actions">
+
+    <select class="date-selector">
+
+        <option>
+            📅 01 May 2024 - 31 May 2024
+        </option>
+
+        <option>
+            This Month
+        </option>
+
+        <option>
+            Last Month
+        </option>
+
+        <option>
+            This Year
+        </option>
+
+    </select>
+
+
+    <button
+        class="add-transaction-btn"
+        onclick="window.location.href='./add-transaction.html'"
+    >
+
+        + Add Transaction
+
+    </button>
+
+</div>
+
+
+
+        <!-- Dashboard Content -->
+        <section class="dashboard">
+
+            <h2>Dashboard</h2>
+
+
+            <!-- Summary Cards -->
+            <div class="summary-cards">
+
+
+                <!-- Balance -->
+                <div class="summary-card">
+
+                    <div class="card-icon balance-icon">
+                        ₹
+                    </div>
+
+                    <div class="card-content">
+
+                        <p>Total Balance</p>
+
+                        <h3 id="total-balance">
+                            ₹0.00
+                        </h3>
+
+                        <span class="positive">
+                            ↑ 12.5% from last month
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Income -->
+                <div class="summary-card">
+
+                    <div class="card-icon income-icon">
+                        ₹
+                    </div>
+
+                    <div class="card-content">
+
+                        <p>Total Income</p>
+
+                        <h3 id="total-income">
+                            ₹0.00
+                        </h3>
+
+                        <span class="positive">
+                            ↑ 8.5% from last month
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Expenses -->
+                <div class="summary-card">
+
+                    <div class="card-icon expense-icon">
+                        ₹
+                    </div>
+
+                    <div class="card-content">
+
+                        <p>Total Expenses</p>
+
+                        <h3 id="total-expenses">
+                            ₹0.00
+                        </h3>
+
+                        <span class="negative">
+                            ↓ 5.2% from last month
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Savings -->
+                <div class="summary-card">
+
+                    <div class="card-icon savings-icon">
+                        ₹
+                    </div>
+
+                    <div class="card-content">
+
+                        <p>Savings</p>
+
+                        <h3 id="total-savings">
+                            ₹0.00
+                        </h3>
+
+                        <span class="positive">
+                            ↑ 18.7% from last month
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Dashboard Charts -->
+            <div class="dashboard-grid">
+
+
+                <!-- Expense Breakdown -->
+                <div class="dashboard-card expense-breakdown">
+
+                    <div class="card-header">
+
+                        <h3>
+                            Expense Breakdown
+                        </h3>
+
+                        <select>
+
+                            <option>
+                                This Month
+                            </option>
+
+                            <option>
+                                Last Month
+                            </option>
+
+                            <option>
+                                This Year
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="expense-content">
+
+
+                        <div class="donut-chart">
+
+                            <div class="donut-center">
+
+                                <strong id="expense-total">
+                                ₹0
+                                </strong>
+
+                                <span>
+                                    Total Expenses
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="expense-legend">
+
+                            <div>
+                                <span class="legend-dot housing"></span>
+                                Housing
+                                <strong data-category="Housing">₹0</strong>
+                            </div>
+
+                            <div>
+                                <span class="legend-dot food"></span>
+                                Food & Dining
+                                <strong data-category="Food & Dining">₹0</strong>
+                            </div>
+
+                            <div>
+                                <span class="legend-dot transport"></span>
+                                Transport
+                                <strong data-category="Transport">₹0</strong>
+                            </div>
+
+                            <div>
+                                <span class="legend-dot utilities"></span>
+                                Utilities
+                                <strong data-category="Utilities">₹0</strong>
+                            </div>
+
+                            <div>
+                                <span class="legend-dot shopping"></span>
+                                Shopping
+                                <strong data-category="Shopping">₹0</strong>
+                            </div>
+
+                            <div>
+                                <span class="legend-dot entertainment"></span>
+                                Entertainment
+                                <strong data-category="Entertainment">₹0</strong>
+                            </div>
+
+                            <div>
+                                <span class="legend-dot health"></span>
+                                Health
+                                <strong data-category="Health">₹0</strong>
+                            </div>
+
+                            <div>
+                                <span class="legend-dot others"></span>
+                                Others
+                                <strong data-category="Others">₹0</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="#"
+                        class="view-link">
+
+                        View Full Report ->
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- Budget vs Actual -->
+                <div class="dashboard-card">
+
+
+                    <div class="card-header">
+
+                        <h3>
+                            Budget vs Actual
+                        </h3>
+
+                        <select>
+
+                            <option>
+                                This Month
+                            </option>
+
+                            <option>
+                                Last Month
+                            </option>
+
+                            <option>
+                                This Year
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="budget-list">
+
+                    </div>
+
+
+                    <a
+                        href="#"
+                        class="view-link">
+
+                        View All Budgets →
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Bottom Dashboard Section -->
+            <div class="bottom-grid">
+
+
+                <!-- Recent Transactions -->
+                <div class="dashboard-card">
+
+
+                    <div class="card-header">
+
+                        <h3>
+                            Recent Transactions
+                        </h3>
+
+                        <a
+                            href="#"
+                            class="view-link">
+
+                            View All
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- JavaScript will create transactions here -->
+                    <div
+                        class="transaction-list"
+                        id="transaction-list">
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Monthly Trend -->
+                <div class="dashboard-card">
+
+
+                    <div class="card-header">
+
+                        <h3>
+                            Monthly Trend
+                        </h3>
+
+                        <select id="trend-period">
+
+                            <option value="this-year">
+                                This Year
+                            </option>
+
+                            <option value="last-year">
+                                Last Year
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="chart-legend">
+
+                        <span>
+                            ● Income
+                        </span>
+
+                        <span>
+                            ● Expenses
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="line-chart">
+
+
+                        <div class="chart-y-axis" id="chart-y-axis">
+
+                            <span>100K</span>
+                            <span>80K</span>
+                            <span>60K</span>
+                            <span>40K</span>
+                            <span>20K</span>
+                            <span>0</span>
+
+                        </div>
+
+
+
+                        <div class="chart-area">
+
+
+                            <div class="grid-line line-1"></div>
+                            <div class="grid-line line-2"></div>
+                            <div class="grid-line line-3"></div>
+                            <div class="grid-line line-4"></div>
+                            <div class="grid-line line-5"></div>
+
+
+
+                            <svg
+                                viewBox="0 0 500 200"
+                                preserveAspectRatio="none">
+
+
+                                <!-- Income -->
+                            <polyline
+                                id="income-line"
+                                points=""
+                                fill="none"
+                                stroke="#10b981"
+                                stroke-width="3"
+                            />
+
+                            <!-- Expenses -->
+                            <polyline
+                                id="expense-line"
+                                points=""
+                                fill="none"
+                                stroke="#ef4444"
+                                stroke-width="3"
+                            />
+
+                            </svg>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="chart-months">
+
+                        <span>Jan</span>
+                        <span>Feb</span>
+                        <span>Mar</span>
+                        <span>Apr</span>
+                        <span>May</span>
+                        <span>Jun</span>
+                        <span>Jul</span>
+                        <span>Aug</span>
+                        <span>Sep</span>
+                        <span>Oct</span>
+                        <span>Nov</span>
+                        <span>Dec</span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Savings Goal -->
+                <div class="dashboard-card savings-goal">
+
+                    <div class="card-header">
+                        <h3>Savings Goal</h3>
+                    </div>
+
+
+                    <div class="goal-content">
+
+                        <div
+                            class="goal-icon"
+                            id="goal-icon">
+                            🏖️
+                        </div>
+
+                        <h4 id="goal-name">
+                            Vacation Trip
+                        </h4>
+
+                        <p id="goal-amount">
+                            ₹0 / ₹0
+                        </p>
+
+
+                        <div class="goal-progress">
+
+                            <div
+                                id="goal-progress"
+                                style="width: 0%">
+                            </div>
+
+                        </div>
+
+
+                        <strong id="goal-percentage">
+                            0% Completed
+                        </strong>
+
+                        <small id="goal-date">
+                            Target Date:
+                        </small>
+
+                    </div>
+
+
+                    <a
+                        href="./goals.html"
+                        class="view-link">
+                        View All Goals →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+  <script src="../js/utils/theme.js"></script>
+  <script src="../js/utils/sidebar.js"></script>
+  <script
+    type="module"
+    src="../js/components/profileDropdown.js">
+</script>
+
+    <!-- Main JavaScript -->
+    <script
+        type="module"
+        src="../js/app.js">
+    </script>
+
+
+</body>
+
+</html>

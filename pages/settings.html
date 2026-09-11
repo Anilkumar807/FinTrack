@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Settings | FinTrack
+    </title>
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/reset.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/layout.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+     <aside class="sidebar">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    📊
+                </div>
+
+                <h2>FinTrack</h2>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <a href="./dashboard.html" class="nav-link">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="./transactions.html" class="nav-link">
+                    <span class="nav-icon">↔</span>
+                    <span>Transactions</span>
+                </a>
+
+                <a href="./income.html" class="nav-link">
+                    <span class="nav-icon">↑</span>
+                    <span>Income</span>
+                </a>
+
+                <a href="./expenses.html" class="nav-link">
+                    <span class="nav-icon">↓</span>
+                    <span>Expenses</span>
+                </a>
+
+                <a href="./budgets.html" class="nav-link">
+                    <span class="nav-icon">▣</span>
+                    <span>Budgets</span>
+                </a>
+
+                <a href="./goals.html" class="nav-link">
+                    <span class="nav-icon">◎</span>
+                    <span>Goals</span>
+                </a>
+
+                <a href="./recurring.html" class="nav-link">
+                    <span class="nav-icon">↻</span>
+                    <span>Recurring</span>
+                </a>
+
+                <a href="./reports.html" class="nav-link">
+                    <span class="nav-icon">▥</span>
+                    <span>Reports</span>
+                </a>
+
+                <a href="./categories.html" class="nav-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Categories</span>
+                </a>
+
+                <a href="./import-export.html" class="nav-link">
+                    <span class="nav-icon">⇅</span>
+                    <span>Import / Export</span>
+                </a>
+
+                <a href="./settings.html" class="nav-link">
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="main-content">
+
+
+        <!-- PAGE HEADER -->
+
+        <header class="page-header">
+
+            <div>
+
+                <h1>
+                    Settings
+                </h1>
+
+                <p>
+                    Manage your FinTrack preferences and data.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             PROFILE SETTINGS
+        ========================== -->
+
+        <section class="dashboard-card settings-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>
+                        👤 Profile Settings
+                    </h2>
+
+                    <p>
+                        Manage your personal information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="settings-form">
+
+
+                <div class="form-group">
+
+                    <label for="user-name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="user-name"
+                        placeholder="Enter your name"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="user-email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="user-email"
+                        placeholder="Enter your email"
+                    >
+
+                </div>
+
+
+                <button
+                    id="save-profile-btn"
+                    class="primary-btn"
+                >
+                    Save Profile
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FINANCIAL SETTINGS
+        ========================== -->
+
+        <section class="dashboard-card settings-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>
+                        💰 Financial Preferences
+                    </h2>
+
+                    <p>
+                        Customize your financial preferences.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="settings-form">
+
+
+                <div class="form-group">
+
+                    <label for="currency">
+                        Currency
+                    </label>
+
+                    <select id="currency">
+
+                        <option value="INR">
+                            INR (₹)
+                        </option>
+
+                        <option value="USD">
+                            USD ($)
+                        </option>
+
+                        <option value="EUR">
+                            EUR (€)
+                        </option>
+
+                        <option value="GBP">
+                            GBP (£)
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="monthly-income-goal">
+                        Monthly Income Goal
+                    </label>
+
+                    <input
+                        type="number"
+                        id="monthly-income-goal"
+                        placeholder="Enter monthly income goal"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <button
+                    id="save-financial-btn"
+                    class="primary-btn"
+                >
+                    Save Preferences
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             APPEARANCE
+        ========================== -->
+
+        <section class="dashboard-card settings-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>
+                        🎨 Appearance
+                    </h2>
+
+                    <p>
+                        Customize the appearance of FinTrack.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="appearance-setting">
+
+                <div>
+
+                    <strong>
+                        Dark Mode
+                    </strong>
+
+                    <p>
+                        Enable dark theme for the application.
+                    </p>
+
+                </div>
+
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="dark-mode-toggle"
+                    >
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DATA MANAGEMENT
+        ========================== -->
+
+        <section class="dashboard-card settings-card danger-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>
+                        🗑️ Data Management
+                    </h2>
+
+                    <p>
+                        Manage or permanently remove your application data.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="data-actions">
+
+                <div class="data-action-item">
+
+                    <div>
+
+                        <strong>
+                            Clear All Transactions
+                        </strong>
+
+                        <p>
+                            Permanently remove all transaction data.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        id="clear-transactions-btn"
+                        class="danger-btn"
+                    >
+                        Clear Transactions
+                    </button>
+
+                </div>
+
+
+                <div class="data-action-item">
+
+                    <div>
+
+                        <strong>
+                            Reset FinTrack
+                        </strong>
+
+                        <p>
+                            Remove all saved FinTrack data and start fresh.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        id="reset-app-btn"
+                        class="danger-btn"
+                    >
+                        Reset Application
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUCCESS MESSAGE -->
+
+        <div
+            id="settings-message"
+            class="success-message"
+        ></div>
+
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/utils/theme.js"></script>
+    <script src="../js/utils/sidebar.js"></script>
+
+    <script
+        type="module"
+        src="../js/pages/settings.js"
+    ></script>
+
+
+</body>
+
+</html>

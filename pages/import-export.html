@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Import / Export | FinTrack
+    </title>
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/reset.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/layout.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    📊
+                </div>
+
+                <h2>FinTrack</h2>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <a href="./dashboard.html" class="nav-link">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="./transactions.html" class="nav-link">
+                    <span class="nav-icon">↔</span>
+                    <span>Transactions</span>
+                </a>
+
+                <a href="./income.html" class="nav-link">
+                    <span class="nav-icon">↑</span>
+                    <span>Income</span>
+                </a>
+
+                <a href="./expenses.html" class="nav-link">
+                    <span class="nav-icon">↓</span>
+                    <span>Expenses</span>
+                </a>
+
+                <a href="./budgets.html" class="nav-link">
+                    <span class="nav-icon">▣</span>
+                    <span>Budgets</span>
+                </a>
+
+                <a href="./goals.html" class="nav-link">
+                    <span class="nav-icon">◎</span>
+                    <span>Goals</span>
+                </a>
+
+                <a href="./recurring.html" class="nav-link">
+                    <span class="nav-icon">↻</span>
+                    <span>Recurring</span>
+                </a>
+
+                <a href="./reports.html" class="nav-link">
+                    <span class="nav-icon">▥</span>
+                    <span>Reports</span>
+                </a>
+
+                <a href="./categories.html" class="nav-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Categories</span>
+                </a>
+
+                <a href="./import-export.html" class="nav-link">
+                    <span class="nav-icon">⇅</span>
+                    <span>Import / Export</span>
+                </a>
+
+                <a href="./settings.html" class="nav-link">
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="main-content">
+
+
+        <!-- =========================
+             PAGE HEADER
+        ========================== -->
+
+        <header class="page-header">
+
+            <div>
+
+                <h1>
+                    Import / Export
+                </h1>
+
+                <p>
+                    Backup your financial data or import transactions.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             IMPORT / EXPORT GRID
+        ========================== -->
+
+        <section class="import-export-grid">
+
+
+            <!-- =====================
+                 EXPORT CARD
+            ====================== -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            📤 Export Transactions
+                        </h2>
+
+                        <p>
+                            Download all your transactions as a CSV file.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="import-export-content">
+
+                    <p>
+                        Your exported file will contain:
+                    </p>
+
+
+                    <ul class="export-list">
+
+                        <li>
+                            ✓ Transaction Name
+                        </li>
+
+                        <li>
+                            ✓ Category
+                        </li>
+
+                        <li>
+                            ✓ Type
+                        </li>
+
+                        <li>
+                            ✓ Amount
+                        </li>
+
+                        <li>
+                            ✓ Date
+                        </li>
+
+                    </ul>
+
+
+                    <button
+                        id="export-transactions-btn"
+                        class="primary-btn"
+                    >
+                        📤 Export Transactions
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================
+                 IMPORT CARD
+            ====================== -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            📥 Import Transactions
+                        </h2>
+
+                        <p>
+                            Upload a CSV file to import transactions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="import-export-content">
+
+
+                    <label
+                        for="import-file"
+                        class="file-upload-area"
+                    >
+
+                        <span class="upload-icon">
+                            📁
+                        </span>
+
+
+                        <strong>
+                            Choose CSV File
+                        </strong>
+
+
+                        <span>
+                            Click here to select a CSV file
+                        </span>
+
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="import-file"
+                        accept=".csv"
+                        hidden
+                    >
+
+
+                    <p
+                        id="selected-file-name"
+                        class="selected-file-name"
+                    >
+                        No file selected
+                    </p>
+
+
+                    <button
+                        id="import-transactions-btn"
+                        class="primary-btn"
+                        disabled
+                    >
+                        📥 Import Transactions
+                    </button>
+
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- =========================
+                    CSV PREVIEW
+                ========================= -->
+
+                <section
+                    id="csv-preview-section"
+                    class="dashboard-card csv-preview-section"
+                    style="display: none;"
+                >
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                👀 CSV Preview
+                            </h2>
+
+                            <p>
+                                Review your transactions before importing.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="csv-table-wrapper">
+
+                        <table class="csv-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Title</th>
+
+                                    <th>Category</th>
+
+                                    <th>Type</th>
+
+                                    <th>Amount</th>
+
+                                    <th>Date</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody
+                                id="csv-preview-body"
+                            >
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <p
+                        id="csv-preview-summary"
+                        class="csv-preview-summary"
+                    >
+                    </p>
+
+                </section>
+
+        <!-- =========================
+             CSV FORMAT GUIDE
+        ========================== -->
+
+        <section class="dashboard-card csv-guide">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>
+                        📄 CSV File Format
+                    </h2>
+
+                    <p>
+                        Your CSV file should contain the following columns.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="csv-table-wrapper">
+
+                <table class="csv-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                title
+                            </th>
+
+                            <th>
+                                category
+                            </th>
+
+                            <th>
+                                type
+                            </th>
+
+                            <th>
+                                amount
+                            </th>
+
+                            <th>
+                                date
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Salary
+                            </td>
+
+                            <td>
+                                Salary
+                            </td>
+
+                            <td>
+                                income
+                            </td>
+
+                            <td>
+                                50000
+                            </td>
+
+                            <td>
+                                2026-09-01
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Grocery Shopping
+                            </td>
+
+                            <td>
+                                Food
+                            </td>
+
+                            <td>
+                                expense
+                            </td>
+
+                            <td>
+                                2500
+                            </td>
+
+                            <td>
+                                2026-09-02
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             STATUS MESSAGE
+        ========================== -->
+
+        <div
+            id="import-export-message"
+            class="success-message"
+        ></div>
+
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+    <script src="../js/utils/theme.js"></script>
+    <script src="../js/utils/sidebar.js"></script>
+
+    <script
+        type="module"
+        src="../js/pages/import-export.js"
+    ></script>
+
+
+</body>
+
+</html>

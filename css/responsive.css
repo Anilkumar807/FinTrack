@@ -1,0 +1,141 @@
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 70px;
+        padding: 10px 8px;
+    }
+
+    .sidebar .logo h2 {
+        display: none;
+    }
+
+    .sidebar nav a {
+        font-size: 0;
+    }
+    .sidebar nav .nav-link{
+        justify-content: center;
+        gap: 0;
+    }
+    .nav-icon {
+        font-size: 18px;
+    }
+
+    .main-content {
+        margin-left: 70px;
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .header-left{
+        width: 100%;
+    }
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .welcome-section h1 {
+        font-size: 20px;
+    }
+    .welcome-section p {
+        font-size: 12px;
+    }
+  .summary-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap:12px;
+   }
+   .summary-card {
+    padding: 15px;
+   }
+   .dashboard-grid {
+    grid-template-columns: 1fr;
+   }
+   .bottom-grid {
+    grid-template-columns: 1fr;
+   }
+
+    .expense-content {
+        flex-direction: column;
+    }
+    .dashboard-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .date-selector,
+    .add-transaction-btn {
+        width: 100%;
+    }
+    .transaction-filters {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+   }
+
+
+        .transaction-filters input,
+        .transaction-filters select {
+
+            width: 100%;
+
+        }
+       .budgets-page-list {
+            grid-template-columns: 1fr;
+        }
+
+        .recurring-list {
+            grid-template-columns: 1fr;
+        }
+
+        .recurring-tools {
+            flex-direction: column;
+
+            align-items: stretch;
+        }
+
+
+        .recurring-tools input,
+        .recurring-tools select,
+        #reset-recurring-btn {
+            width: 100%;
+
+            min-width: 0;
+        }
+
+        .recurring-status-cards {
+
+            grid-template-columns: 1fr;
+
+        }
+
+
+
+    
+}
+@media (max-width: 480px) {
+
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .user-info {
+        display: none;
+    }
+
+    .chart-months {
+        font-size: 7px;
+        margin-left: 35px;
+    }
+
+    .chart-y-axis {
+        width: 35px;
+        font-size: 8px;
+    }
+
+}

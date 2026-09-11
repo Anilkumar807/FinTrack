@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FinTrack - Recurring Transactions</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+</head>
+
+
+<body>
+
+    <div class="app-layout">
+
+
+        <!-- Sidebar -->
+
+         <aside class="sidebar">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    📊
+                </div>
+
+                <h2>FinTrack</h2>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <a href="./dashboard.html" class="nav-link">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="./transactions.html" class="nav-link">
+                    <span class="nav-icon">↔</span>
+                    <span>Transactions</span>
+                </a>
+
+                <a href="./income.html" class="nav-link">
+                    <span class="nav-icon">↑</span>
+                    <span>Income</span>
+                </a>
+
+                <a href="./expenses.html" class="nav-link">
+                    <span class="nav-icon">↓</span>
+                    <span>Expenses</span>
+                </a>
+
+                <a href="./budgets.html" class="nav-link">
+                    <span class="nav-icon">▣</span>
+                    <span>Budgets</span>
+                </a>
+
+                <a href="./goals.html" class="nav-link">
+                    <span class="nav-icon">◎</span>
+                    <span>Goals</span>
+                </a>
+
+                <a href="./recurring.html" class="nav-link">
+                    <span class="nav-icon">↻</span>
+                    <span>Recurring</span>
+                </a>
+
+                <a href="./reports.html" class="nav-link">
+                    <span class="nav-icon">▥</span>
+                    <span>Reports</span>
+                </a>
+
+                <a href="./categories.html" class="nav-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Categories</span>
+                </a>
+
+                <a href="./import-export.html" class="nav-link">
+                    <span class="nav-icon">⇅</span>
+                    <span>Import / Export</span>
+                </a>
+
+                <a href="./settings.html" class="nav-link">
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <!-- Main Content -->
+
+        <main class="main-content">
+
+
+            <!-- Page Header -->
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>
+                        Recurring Transactions
+                    </h1>
+
+                    <p>
+                        Manage your regular income and expenses.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="add-transaction-btn"
+                    id="add-recurring-btn"
+                >
+                    + Add Recurring
+                </button>
+
+            </div>
+
+
+
+            <!-- Statistics -->
+
+            <div class="summary-cards">
+
+
+                <div class="stat-card clickable-stat"
+                    id="recurring-income-card">
+
+                    <div class="card-icon income-icon">
+                        ↑
+                    </div>
+
+                    <div class="card-content">
+
+                        <p>
+                            Recurring Income
+                        </p>
+
+                        <h3 id="recurring-income">
+                            ₹0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                        class="stat-card clickable-stat"
+                        id="recurring-expense-card"
+                    >
+
+                    <div class="card-icon expense-icon">
+                        ↓
+                    </div>
+
+                    <div class="card-content">
+
+                        <p>
+                            Recurring Expenses
+                        </p>
+
+                        <h3 id="recurring-expenses">
+                            ₹0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="stat-card clickable-stat"
+                    id="active-recurring-card"
+                >
+                    <div class="card-icon savings-icon">
+                        🔄
+                    </div>
+
+                    <div class="card-content">
+
+                        <p>
+                            Active Recurring
+                        </p>
+
+                        <h3 id="active-recurring">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <div class="card-icon savings-icon">
+                        📆
+                    </div>
+
+                    <div class="card-content">
+
+                        <p>
+                            Upcoming Payments
+                        </p>
+
+                        <h3 id="upcoming-payments">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <div class="card-icon income-icon">
+                        📈
+                    </div>
+
+                    <div class="card-content">
+
+                        <p>
+                            Estimated Monthly Income
+                        </p>
+
+                        <h3 id="monthly-recurring-income">
+                            ₹0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <div class="card-icon expense-icon">
+                        📉
+                    </div>
+
+                    <div class="card-content">
+
+                        <p>
+                            Estimated Monthly Expenses
+                        </p>
+
+                        <h3 id="monthly-recurring-expenses">
+                            ₹0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <div class="card-icon balance-icon">
+                        💰
+                    </div>
+
+                    <div class="card-content">
+
+                        <p>
+                            Monthly Net Cash Flow
+                        </p>
+
+                        <h3 id="monthly-net-cashflow">
+                            ₹0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <div class="card-icon savings-icon">
+                        📊
+                    </div>
+
+                    <div class="card-content">
+
+                        <p>
+                            Monthly Savings Rate
+                        </p>
+
+                        <h3 id="monthly-savings-rate">
+                            0%
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="next-payment-card">
+
+                <div class="next-payment-icon">
+                    📅
+                </div>
+
+                <div class="next-payment-content">
+
+                    <small>
+                        Next Payment
+                    </small>
+
+                    <h3 id="next-payment-name">
+                        No upcoming payments
+                    </h3>
+
+                    <p id="next-payment-details">
+                        Add a recurring transaction to get started.
+                    </p>
+
+                </div>
+
+            </div>
+
+          <div class="recurring-status-cards">
+
+                <div
+                    class="stat-card clickable-stat"
+                    id="due-soon-card"
+                >
+
+                    <span>📅</span>
+
+                    <div>
+
+                        <small>Due Soon</small>
+
+                        <strong id="due-soon-count">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="stat-card clickable-stat"
+                    id="overdue-card"
+                >
+
+                    <span>🔴</span>
+
+                    <div>
+
+                        <small>Overdue</small>
+
+                        <strong id="overdue-count">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Recurring Tools -->
+
+            <div class="recurring-tools">
+
+                <!-- Search -->
+
+               <div class="search-recurring-container">
+
+                    <input
+                        type="text"
+                        id="search-recurring"
+                        placeholder="🔍 Search recurring transactions..."
+                    >
+
+                    <button
+                        type="button"
+                        id="clear-search-recurring"
+                        class="clear-search-btn"
+                    >
+                        ✕
+                    </button>
+
+                </div>
+
+
+                <!-- Type Filter -->
+
+               <select id="recurring-type-filter">
+                    <option value="all">All Types</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+
+
+                <!-- Frequency Filter -->
+
+                <select id="recurring-frequency-filter">
+
+                    <option value="daily">
+                        Daily
+                    </option>
+
+                    <option value="weekly">
+                        Weekly
+                    </option>
+
+                    <option value="monthly">
+                        Monthly
+                    </option>
+
+                    <option value="yearly">
+                        Yearly
+                    </option>
+
+                     <option value="all">
+                        All Frequencies
+                    </option>
+
+                </select>
+
+
+                <!-- Reset -->
+
+                <button
+                    id="reset-recurring-btn"
+                    type="button"
+                >
+                    Reset
+                </button>
+
+            </div>
+
+
+        <p id="recurring-count"></p>
+            <!-- Recurring List -->
+
+            <div
+                class="recurring-list"
+                id="recurring-list"
+            >
+
+            </div>
+
+
+
+            <!-- Add/Edit Modal -->
+
+            <div
+                class="modal"
+                id="recurring-modal"
+            >
+
+                <div class="modal-content">
+
+
+                    <div class="modal-header">
+
+                        <h2 id="recurring-modal-title">
+                            Add Recurring Transaction
+                        </h2>
+
+
+                        <button
+                            type="button"
+                            class="close-modal"
+                            id="close-recurring-modal"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+
+                    <form id="recurring-form">
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Transaction Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="recurring-name"
+                                placeholder="e.g. Netflix Subscription"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Type
+                            </label>
+
+                            <select
+                                id="recurring-type"
+                                required
+                            >
+
+                                <option value="expense">
+                                    Expense
+                                </option>
+
+                                <option value="income">
+                                    Income
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Category
+                            </label>
+
+                            <select
+                                id="recurring-category"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Category
+                                </option>
+
+                                <option value="Food & Dining">
+                                    Food & Dining
+                                </option>
+
+                                <option value="Transport">
+                                    Transport
+                                </option>
+
+                                <option value="Utilities">
+                                    Utilities
+                                </option>
+
+                                <option value="Shopping">
+                                    Shopping
+                                </option>
+
+                                <option value="Entertainment">
+                                    Entertainment
+                                </option>
+
+                                <option value="Health">
+                                    Health
+                                </option>
+
+                                <option value="Salary">
+                                    Salary
+                                </option>
+
+                                <option value="Freelance">
+                                    Freelance
+                                </option>
+
+                                <option value="Others">
+                                    Others
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Amount
+                            </label>
+
+                            <input
+                                type="number"
+                                id="recurring-amount"
+                                min="1"
+                                placeholder="Enter amount"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Frequency
+                            </label>
+
+                            <select
+                                id="recurring-frequency"
+                                required
+                            >
+
+                                <option value="daily">
+                                    Daily
+                                </option>
+
+                                <option value="weekly">
+                                    Weekly
+                                </option>
+
+                                <option value="monthly">
+                                    Monthly
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Next Due Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="recurring-date"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <button
+                            type="submit"
+                            class="add-transaction-btn"
+                            id="save-recurring-btn"
+                        >
+                            Save Recurring
+                        </button>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+    <div id="success-message"
+       class="success-message"></div>
+
+      <script src="../js/utils/theme.js"></script>
+      <script src="../js/utils/sidebar.js"></script>
+
+    <script
+        type="module"
+        src="../js/pages/recurring.js"
+    ></script>
+
+</body>
+
+</html>

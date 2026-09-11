@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FinTrack - Expenses</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+</head>
+
+
+<body>
+
+    <div class="app-layout">
+
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <div class="logo-icon">📊</div>
+
+                <h2>FinTrack</h2>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <a href="./dashboard.html" class="nav-link">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="./transactions.html" class="nav-link">
+                    <span class="nav-icon">↔</span>
+                    <span>Transactions</span>
+                </a>
+
+                <a href="./income.html" class="nav-link">
+                    <span class="nav-icon">↑</span>
+                    <span>Income</span>
+                </a>
+
+                <a href="./expenses.html" class="nav-link">
+                    <span class="nav-icon">↓</span>
+                    <span>Expenses</span>
+                </a>
+
+                <a href="./budgets.html" class="nav-link">
+                    <span class="nav-icon">▣</span>
+                    <span>Budgets</span>
+                </a>
+
+                <a href="./goals.html" class="nav-link">
+                    <span class="nav-icon">◎</span>
+                    <span>Goals</span>
+                </a>
+
+                <a href="./recurring.html" class="nav-link">
+                    <span class="nav-icon">↻</span>
+                    <span>Recurring</span>
+                </a>
+
+                <a href="./reports.html" class="nav-link">
+                    <span class="nav-icon">▥</span>
+                    <span>Reports</span>
+                </a>
+
+                <a href="./categories.html" class="nav-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Categories</span>
+                </a>
+
+                <a href="./settings.html" class="nav-link">
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+
+        <main class="main-content">
+
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>Expenses</h1>
+
+                    <p>
+                        Track and manage all your expenses.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="./add-transaction.html"
+                    class="add-transaction-btn"
+                >
+                    + Add Expense
+                </a>
+
+            </div>
+
+
+            <!-- Expense Summary -->
+
+            <div class="summary-cards">
+
+
+                <div class="summary-card">
+
+                    <div class="card-icon expense-icon">
+                        ₹
+                    </div>
+
+                    <div class="card-content">
+
+                        <p>Total Expenses</p>
+
+                        <h3 id="expense-total">
+                            ₹0.00
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="card-icon expense-icon">
+                        ↓
+                    </div>
+
+                    <div class="card-content">
+
+                        <p>Expense Transactions</p>
+
+                        <h3 id="expense-count">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Filters -->
+
+            <div class="transaction-filters">
+
+                <input
+                    type="text"
+                    id="expense-search"
+                    placeholder="Search expenses..."
+                >
+
+
+                <select id="expense-category-filter">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Expense Table -->
+
+            <div class="transactions-card">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Date</th>
+                            <th>Expense</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="expense-table-body">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+    <script src="../js/utils/theme.js"></script>
+    <script src="../js/utils/sidebar.js"></script>
+
+
+
+    <script
+        type="module"
+        src="../js/pages/expenses.js"
+    ></script>
+
+</body>
+
+</html>
